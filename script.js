@@ -1,0 +1,34 @@
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const photoFrame = document.querySelector(".photo-frame");
+const profilePhoto = document.querySelector(".photo-frame img");
+const contactForm = document.querySelector("#contact-form");
+const formMessage = document.querySelector("#form-message");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+if (profilePhoto && photoFrame) {
+  profilePhoto.addEventListener("error", () => {
+    photoFrame.classList.add("photo-missing");
+  });
+}
+
+if (contactForm && formMessage) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    formMessage.textContent = "Formulario demostrativo: el mensaje no se envia a un servidor.";
+    contactForm.reset();
+  });
+}
