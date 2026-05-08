@@ -29,6 +29,18 @@ Antes de entregar el trabajo, reemplazar ese reemplazo visual por una foto perso
 
 Abrir el archivo `index.html` directamente en el navegador.
 
+## Cache busting
+
+Los archivos estaticos principales se referencian con una version en la URL, por ejemplo:
+
+```html
+styles.css?v=20260508-1
+script.js?v=20260508-1
+assets/foto.jpg?v=20260508-1
+```
+
+Cuando se modifique `styles.css`, `script.js` o `assets/foto.jpg`, actualizar ese valor de version en `index.html` para que los navegadores descarguen la version nueva sin pedir un hard refresh.
+
 ## Como publicarlo con GitHub Pages
 
 1. Subir estos archivos a un repositorio de GitHub.
