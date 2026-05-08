@@ -336,11 +336,16 @@ h3 {
 }
 
 .social-links a {
-  padding: 18px;
+  min-height: 64px;
+  padding: 16px 18px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   color: var(--primary);
   background: var(--surface-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   font-weight: 700;
   text-align: center;
 }
@@ -349,6 +354,13 @@ h3 {
 .social-links a:focus {
   border-color: #9dc4e6;
   background: #edf6ff;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: currentColor;
 }
 
 .contact-form {
