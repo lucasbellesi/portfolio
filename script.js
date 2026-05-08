@@ -4,6 +4,7 @@ const photoFrame = document.querySelector(".photo-frame");
 const profilePhoto = document.querySelector(".photo-frame img");
 const contactForm = document.querySelector("#contact-form");
 const formMessage = document.querySelector("#form-message");
+const linkedinUrl = "https://www.linkedin.com/in/lucas-alejo-bellesi";
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
@@ -28,6 +29,14 @@ if (profilePhoto && photoFrame) {
     photoFrame.classList.add("photo-missing");
   });
 }
+
+document.querySelectorAll(".social-links a").forEach((link) => {
+  if (link.textContent.trim().toLowerCase() === "linkedin") {
+    link.href = linkedinUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  }
+});
 
 if (contactForm && formMessage) {
   contactForm.addEventListener("submit", (event) => {
