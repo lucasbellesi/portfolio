@@ -1,6 +1,6 @@
-# Portfolio academico - Lucas Alejo Bellesi
+# Portfolio - Lucas Alejo Bellesi
 
-Sitio web estatico desarrollado como portfolio academico para la Tecnicatura Universitaria en Programacion de la UTN FRGP.
+Sitio web estatico desarrollado como portfolio para la Tecnicatura Universitaria en Programacion de la UTN FRGP.
 
 El proyecto usa solamente HTML, CSS y JavaScript vanilla. Incluye menu de navegacion, presentacion inicial con foto, informacion general, conocimientos, proyectos, redes y formulario de contacto conectado con Formspree.
 
