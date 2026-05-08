@@ -23,6 +23,8 @@ assets/foto.jpg
 
 Si la imagen no existe, el sitio muestra un reemplazo visual con las iniciales.
 
+Antes de entregar el trabajo, reemplazar ese reemplazo visual por una foto personal real en `assets/foto.jpg`.
+
 ## Como verlo localmente
 
 Abrir el archivo `index.html` directamente en el navegador.
@@ -36,3 +38,9 @@ Abrir el archivo `index.html` directamente en el navegador.
 5. Guardar los cambios.
 
 Luego GitHub Pages va a generar una URL publica para entregar el portfolio.
+
+Para este repositorio, la URL esperada deberia ser:
+
+```text
+https://lucasbellesi.github.io/portfolio/
+```

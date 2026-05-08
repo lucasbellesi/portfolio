@@ -20,6 +20,10 @@ if (menuToggle && navLinks) {
 }
 
 if (profilePhoto && photoFrame) {
+  if (profilePhoto.complete && profilePhoto.naturalWidth === 0) {
+    photoFrame.classList.add("photo-missing");
+  }
+
   profilePhoto.addEventListener("error", () => {
     photoFrame.classList.add("photo-missing");
   });
