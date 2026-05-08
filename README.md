@@ -2,13 +2,13 @@
 
 Sitio web estatico desarrollado como portfolio academico para la Tecnicatura Universitaria en Programacion de la UTN FRGP.
 
-El proyecto usa solamente HTML, CSS y JavaScript vanilla. Incluye menu de navegacion, presentacion inicial con foto, informacion general, conocimientos, proyectos, redes y formulario de contacto demostrativo.
+El proyecto usa solamente HTML, CSS y JavaScript vanilla. Incluye menu de navegacion, presentacion inicial con foto, informacion general, conocimientos, proyectos, redes y formulario de contacto conectado con Formspree.
 
 ## Estructura
 
 - `index.html`: estructura principal del sitio.
 - `styles.css`: estilos responsive y presentacion visual.
-- `script.js`: menu mobile, fallback de foto y formulario demostrativo.
+- `script.js`: menu mobile, fallback de foto y envio del formulario con Formspree.
 - `assets/README.txt`: indicacion para colocar la foto personal.
 
 ## Foto personal
@@ -34,12 +34,22 @@ Abrir el archivo `index.html` directamente en el navegador.
 Los archivos estaticos principales se referencian con una version en la URL, por ejemplo:
 
 ```html
-styles.css?v=20260508-3
-script.js?v=20260508-3
-assets/foto.jpg?v=20260508-3
+styles.css?v=20260508-4
+script.js?v=20260508-4
+assets/foto.jpg?v=20260508-4
 ```
 
 Cuando se modifique `styles.css`, `script.js` o `assets/foto.jpg`, actualizar ese valor de version en `index.html` para que los navegadores descarguen la version nueva sin pedir un hard refresh.
+
+## Formulario de contacto
+
+El formulario envia los mensajes con Formspree usando el endpoint:
+
+```text
+https://formspree.io/f/xbdwzyba
+```
+
+El envio se realiza con JavaScript vanilla y `fetch`, por lo que la persona no sale de la pagina al enviar el mensaje.
 
 ## Como publicarlo con GitHub Pages
 
