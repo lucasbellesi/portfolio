@@ -306,11 +306,27 @@ h3 {
 
 .project-card {
   min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .project-card:hover {
   border-color: #9dc4e6;
   box-shadow: var(--shadow);
+}
+
+.project-link {
+  width: fit-content;
+  margin-top: auto;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.project-link:hover,
+.project-link:focus {
+  color: var(--primary-dark);
+  text-decoration: underline;
 }
 
 .social-links {

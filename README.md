@@ -34,9 +34,9 @@ Abrir el archivo `index.html` directamente en el navegador.
 Los archivos estaticos principales se referencian con una version en la URL, por ejemplo:
 
 ```html
-styles.css?v=20260508-4
-script.js?v=20260508-4
-assets/foto.jpg?v=20260508-4
+styles.css?v=20260508-5
+script.js?v=20260508-5
+assets/foto.jpg?v=20260508-5
 ```
 
 Cuando se modifique `styles.css`, `script.js` o `assets/foto.jpg`, actualizar ese valor de version en `index.html` para que los navegadores descarguen la version nueva sin pedir un hard refresh.
