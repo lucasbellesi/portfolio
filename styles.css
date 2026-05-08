@@ -361,6 +361,9 @@ h3 {
 }
 
 .skills-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 9px 14px;
   border: 1px solid var(--chip-border);
   border-radius: 999px;
@@ -368,6 +371,13 @@ h3 {
   background: var(--chip-bg);
   font-size: 0.95rem;
   font-weight: 700;
+}
+
+.skill-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  fill: currentColor;
 }
 
 .projects-grid {

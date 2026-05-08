@@ -38,9 +38,9 @@ El sitio usa por defecto la preferencia del sistema del usuario. Desde el boton 
 Los archivos estaticos principales se referencian con una version en la URL, por ejemplo:
 
 ```html
-styles.css?v=20260508-7
-script.js?v=20260508-7
-assets/foto.jpg?v=20260508-7
+styles.css?v=20260508-8
+script.js?v=20260508-8
+assets/foto.jpg?v=20260508-8
 ```
 
 Cuando se modifique `styles.css`, `script.js` o `assets/foto.jpg`, actualizar ese valor de version en `index.html` para que los navegadores descarguen la version nueva sin pedir un hard refresh.
