@@ -1,11 +1,49 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
+const themeToggle = document.querySelector(".theme-toggle");
 const photoFrame = document.querySelector(".photo-frame");
 const profilePhoto = document.querySelector(".photo-frame img");
 const contactForm = document.querySelector("#contact-form");
 const formMessage = document.querySelector("#form-message");
 const contactSubmit = document.querySelector("#contact-submit");
 const linkedinUrl = "https://www.linkedin.com/in/lucas-alejo-bellesi";
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const getCurrentTheme = () => document.documentElement.dataset.theme || "light";
+
+const updateThemeButton = () => {
+  if (!themeToggle) {
+    return;
+  }
+
+  const nextTheme = getCurrentTheme() === "dark" ? "light" : "dark";
+  themeToggle.setAttribute("aria-label", `Cambiar a modo ${nextTheme === "dark" ? "oscuro" : "claro"}`);
+  themeToggle.setAttribute("title", `Cambiar a modo ${nextTheme === "dark" ? "oscuro" : "claro"}`);
+};
+
+const applyTheme = (theme) => {
+  document.documentElement.dataset.theme = theme;
+  updateThemeButton();
+};
+
+const applySystemTheme = () => {
+  if (!localStorage.getItem("theme")) {
+    applyTheme(systemTheme.matches ? "dark" : "light");
+  }
+};
+
+applySystemTheme();
+updateThemeButton();
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = getCurrentTheme() === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", nextTheme);
+    applyTheme(nextTheme);
+  });
+}
+
+systemTheme.addEventListener("change", applySystemTheme);
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
