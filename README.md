@@ -9,6 +9,7 @@ El proyecto usa solamente HTML, CSS y JavaScript vanilla. Incluye menu de navega
 - `index.html`: estructura principal del sitio.
 - `styles.css`: estilos responsive y presentacion visual.
 - `script.js`: menu mobile, fallback de foto y envio del formulario con Formspree.
+- `assets/favicon.ico`: icono del sitio para la pestana del navegador.
 - `assets/README.txt`: indicacion para colocar la foto personal.
 
 ## Foto personal
@@ -38,12 +39,13 @@ El sitio usa por defecto la preferencia del sistema del usuario. Desde el boton 
 Los archivos estaticos principales se referencian con una version en la URL, por ejemplo:
 
 ```html
-styles.css?v=20260508-8
-script.js?v=20260508-8
-assets/foto.jpg?v=20260508-8
+styles.css?v=20260508-9
+script.js?v=20260508-9
+assets/foto.jpg?v=20260508-9
+assets/favicon.ico?v=20260508-9
 ```
 
-Cuando se modifique `styles.css`, `script.js` o `assets/foto.jpg`, actualizar ese valor de version en `index.html` para que los navegadores descarguen la version nueva sin pedir un hard refresh.
+Cuando se modifique `styles.css`, `script.js`, `assets/foto.jpg` o `assets/favicon.ico`, actualizar ese valor de version en `index.html` para que los navegadores descarguen la version nueva sin pedir un hard refresh.
 
 ## Formulario de contacto
 
