@@ -10,6 +10,8 @@ El proyecto usa solamente HTML, CSS y JavaScript vanilla. Incluye menu de navega
 - `styles.css`: estilos responsive y presentacion visual.
 - `script.js`: menu mobile, fallback de foto y envio del formulario con Formspree.
 - `assets/favicon.ico`: icono del sitio para la pestana del navegador.
+- `assets/fonts/InterVariable.woff2`: fuente open source Inter servida localmente.
+- `assets/fonts/Inter-LICENSE.txt`: licencia de la fuente Inter.
 - `assets/README.txt`: indicacion para colocar la foto personal.
 
 ## Foto personal
@@ -39,13 +41,13 @@ El sitio usa por defecto la preferencia del sistema del usuario. Desde el boton 
 Los archivos estaticos principales se referencian con una version en la URL, por ejemplo:
 
 ```html
-styles.css?v=20260509-1
-script.js?v=20260509-1
-assets/foto.jpg?v=20260509-1
-assets/favicon.ico?v=20260509-1
+styles.css?v=20260509-2
+script.js?v=20260509-2
+assets/foto.jpg?v=20260509-2
+assets/favicon.ico?v=20260509-2
 ```
 
-Cuando se modifique `styles.css`, `script.js`, `assets/foto.jpg` o `assets/favicon.ico`, actualizar ese valor de version en `index.html` para que los navegadores descarguen la version nueva sin pedir un hard refresh.
+Cuando se modifique `styles.css`, `script.js`, `assets/foto.jpg`, `assets/favicon.ico` o la fuente, actualizar ese valor de version en `index.html` para que los navegadores descarguen la version nueva sin pedir un hard refresh.
 
 ## Formulario de contacto
 
